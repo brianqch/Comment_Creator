@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-5 sm:p-24">
       <div className="flex justify-center items-center pb-10 flex-col">
-        <h1 className="text-4xl font-mono mb-1">Code Comment Generator</h1>
-        <span>A simple tool for effortlessly creating comments for your code.</span>
+        <h1 className="text-4xl font-mono mb-2">Code Comment Generator</h1>
+        <span className="font-mono ">A simple tool for creating comments for your code using AI.</span>
       </div>
       <Credit />
       <br />

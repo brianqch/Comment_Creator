@@ -22,13 +22,13 @@ export default function Output({ comment, language }: InputProps) {
 
     return (
         <div className="flex flex-col rounded-lg w-full max-w-full h-full">
-            <div className="flex w-full justify-between bg-zinc-700 text-white px-4 py-2 border-r-2 border-gray-600">
+            <div className="flex w-full justify-between bg-neutral-700 text-white px-4 py-2 border-r-2 border-neutral-600">
                 <span className="w-full font-bold">
                     Code
                 </span>
                 <button
                     onClick={handleCopy}
-                    className="flex items-center gap-2 hover:bg-zinc-600 focus:outline-none text-nowrap transition-all"
+                    className="flex items-center gap-2 hover:bg-neutral-600 focus:outline-none text-nowrap transition-all"
                 >
                     {copied ? <FaCheck/> : <GoCopy />}
                     <span>{copied ? 'Copied!' : 'Copy Code'}</span>

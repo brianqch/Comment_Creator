@@ -41,7 +41,7 @@ export default function Input({ comment, setComment, language, setLanguage }: In
     };
 
     return (
-        <div className="flex flex-col justify-center bg-zinc-800 w-full max-w-full h-full p-4">
+        <div className="flex flex-col justify-center bg-neutral-700 w-full max-w-full h-full p-4">
             <div className="mb-4">
                 <label htmlFor="language" className="block text-white font-bold mb-2">
                     Language
@@ -54,7 +54,7 @@ export default function Input({ comment, setComment, language, setLanguage }: In
                 </label>
                 <textarea
                     id="code"
-                    className="flex-grow bg-zinc-900 text-white border-none p-2 rounded-lg outline-none text-sm w-full resize-none font-mono"
+                    className="flex-grow bg-neutral-800 text-white border-none p-2 outline-none text-sm w-full resize-none font-mono"
                     placeholder="Enter your code here..."
                     rows={10}
                     spellCheck={false}
@@ -62,13 +62,15 @@ export default function Input({ comment, setComment, language, setLanguage }: In
                     onChange={(e) => setCode(e.target.value)}
                 />
             </div>
-            <button
-                onClick={handleSubmit}
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
-                disabled={loading}
-            >
-                {loading ? 'Generating...' : 'Generate Comment'}
-            </button>
+            <div className="flex justify-center items-center">
+                <button
+                    onClick={handleSubmit}
+                    className="bg-[#5dbea3] border border-[#5dbea3] text-white px-4 py-3 rounded-lg hover:bg-[#387161] focus:outline-none font-mono "
+                    disabled={loading}
+                >
+                    {loading ? 'Generating...' : 'Generate Comment'}
+                </button>
+            </div>
         </div>
     );
 }

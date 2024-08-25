@@ -71,7 +71,7 @@ export default function SearchableDropdown({language, setLanguage} : InputProps)
                         value={language}
                         onChange={handleInputChange}
                         placeholder="Search for a language..."
-                        className="flex-1 bg-zinc-800 text-gray-300 border-2 border-gray-600 rounded p-3 shadow-sm transition focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                        className="flex-1 bg-neutral-800 text-neutral-300 border-2 border-neutral-600 p-2 shadow-sm transition cursor-pointer text-sm"
                         onClick={handleInputClick}
                     />
                     <svg
@@ -87,11 +87,11 @@ export default function SearchableDropdown({language, setLanguage} : InputProps)
                 </div>
 
                 {showDropdown && filteredShortcuts.length > 0 && (
-                    <ul className="top-16 absolute z-10 mt-1 w-full bg-gray-800 border border-gray-600 rounded shadow-lg overflow-y-auto max-h-44 text-gray-300">
+                    <ul className="top-12 absolute z-10 mt-1 w-full bg-neutral-800 border border-zinc-600 rounded shadow-lg overflow-y-auto max-h-44 text-neutral-300 text-sm">
                         {filteredShortcuts.map((shortcut, index) => (
                             <li
                                 key={index}
-                                className="px-4 py-2 text-md hover:bg-gray-700 cursor-pointer"
+                                className="px-4 py-2 text-md hover:bg-neutral-700 cursor-pointer"
                                 onClick={() => handleSelect(shortcut)}
                             >
                                 {shortcut}
